@@ -4,7 +4,7 @@
   "author": "Nick G",
   "version": "0.0.1",
   "dependencies": {
-    "express": "2.5.2"
+    "deployd": "~0.6.10"
   },
   "engine": "node >= 0.6.6"
 }
