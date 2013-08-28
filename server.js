@@ -16,4 +16,4 @@ var options = {
 };
 var server = deployd(options);
 server.listen();
-console.log('server running!')
+console.log('server running!')  
