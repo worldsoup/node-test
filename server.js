@@ -1,7 +1,19 @@
-var http = require('http');
-console.log('Server starting');
-http.createServer(function (req, res) {
-res.writeHead(200, {'Content-Type': 'text/plain'});
-res.end('Hello World\n');
-}).listen(80);
-console.log('Server running at http://172.31.18.76:80/');
+console.log('server starting!')
+var deployd = require('deployd');
+
+var options = {
+  port:process.env.PORT || 80,
+  db:{
+    port:10095,              // \
+    host:"dharma.mongohq.com", //  \ 
+    name:"app16925968",      //   \
+    credentials:{            //   / replace with your own settings
+      username:"master", //  /
+      password:"Woodstock0"  // /
+    }
+  }
+
+};
+var server = deployd(options);
+server.listen();
+console.log('server running!')
